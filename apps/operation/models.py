@@ -56,7 +56,7 @@ class UserFavorite(models.Model):
 
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name="用户")
     # 机智版: 直接保存用户的id，fav的id
-    fav_id = models.IntegerField(default=0)
+    fav_id = models.IntegerField(default=0, verbose_name="被收藏的id")
     # 表明收藏的是哪种类型
     fav_type = models.IntegerField(
         choices=TYPE_CHOICES,
